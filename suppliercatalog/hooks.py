@@ -321,6 +321,7 @@ fixtures = [
                     "German Accounting Settings",
                     "Sales Invoice",
                     "Purchase Invoice",
+                    "Customer",
                 ]
             ]
         ]
@@ -346,6 +347,7 @@ fixtures = [
                     "German Accounting Settings",
                     "Sales Invoice",
                     "Purchase Invoice",
+                    "Customer",
                 ]
             ]
         ]
