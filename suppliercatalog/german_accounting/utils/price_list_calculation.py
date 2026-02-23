@@ -213,13 +213,19 @@ def calculate_single_item_price(item_price_doc):
     """
     settings = _get_settings()
 
+    if isinstance(item_price_doc, str):
+        item_price_doc = frappe.get_doc("Item Price", item_price_doc)
+    else:
+        item_price_doc = item_price_doc
+
+
     if not settings.auto_generate_prices:
         return
 
     if item_price_doc.price_list != settings.source_price_list:
         return
 
-    source_rate = flt(item_price_doc.price_list_rate)
+    source_rate = float(item_price_doc.price_list_rate)
     item_code = item_price_doc.item_code
     uom = item_price_doc.uom
 
