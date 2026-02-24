@@ -22,7 +22,11 @@
   "creditor_section",
   "auto_creditor",
   "column_break_kpnl",
-  "creditor_parent_acc"
+  "creditor_parent_acc",
+  "epc_qr_code_section",
+  "epc_qr_enabled",
+  "epc_bank_acc",
+  "bank_recipient_name"
  ],
  "fields": [
   {
@@ -132,13 +136,37 @@
    "fieldname": "later_warehousesetup",
    "fieldtype": "Check",
    "label": "Lagerartikel sp\u00e4ter einrichten"
+  },
+  {
+   "fieldname": "epc_qr_code_section",
+   "fieldtype": "Section Break",
+   "label": "EPC QR Code"
+  },
+  {
+   "fieldname": "epc_bank_acc",
+   "fieldtype": "Link",
+   "label": "Default  Company Bankaccount",
+   "link_filters": "[[\"Bank Account\",\"is_company_account\",\"=\",1]]",
+   "options": "Bank Account"
+  },
+  {
+   "default": "0",
+   "fieldname": "epc_qr_enabled",
+   "fieldtype": "Check",
+   "label": "Enable"
+  },
+  {
+   "description": "Nur auszuf\u00fcllen wenn Empf\u00e4nger  \u2260 Firmen Name",
+   "fieldname": "bank_recipient_name",
+   "fieldtype": "Data",
+   "label": "Empf\u00e4nger Name"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2026-02-03 17:26:15.829504",
+ "modified": "2026-02-24 15:33:03.080262",
  "modified_by": "Administrator",
  "module": "German Accounting",
  "name": "German Accounting Settings",

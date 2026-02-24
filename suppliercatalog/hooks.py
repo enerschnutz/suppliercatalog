@@ -184,6 +184,8 @@ doc_events = {
 
     "Sales Invoice": {
         "on_update": "suppliercatalog.german_accounting.utils.stock_update.before_submit",
+        "validate":"suppliercatalog.german_accounting.utils.epcqrcode.get_epc_bank_account",
+        "on_submit": "suppliercatalog.german_accounting.utils.epcqrcode.add_epc_qr",
     },
     
 }
