@@ -331,32 +331,27 @@ fixtures = [
 
     # Property Setters – identisches Superset
     {
-    "dt": "Property Setter",
-    "filters": [
-        [
-            "doc_type",
-            "in",
+        "dt": "Property Setter",
+        "filters": [
             [
-                # Suppliercatalog
-                "Supplier Catalog Item",
-                "Supplier Catalog Settings",
-                "Item",
-                "Item Price",
-                "Purchase Receipt",
+                "doc_type",
+                "in",
+                [
+                    # Suppliercatalog / bisher exportiert
+                    "Supplier Catalog Item",
+                    "Supplier Catalog Settings",
+                    "Item",
+                    "Item Price",
+                    "Purchase Receipt",
 
-                # German Accounting
-                "Price List Calculation Settings",
-                "German Accounting Settings",
-                "Sales Invoice",
-                "Purchase Invoice",
-                "Customer",
+                    # German Accounting
+                    "Price List Calculation Settings",
+                    "German Accounting Settings",
+                    "Sales Invoice",
+                    "Purchase Invoice",
+                    "Customer",
+                ]
             ]
-        ],
-        [
-            "doctype_or_field",
-            "=",
-            "DocField"
         ]
-    ]
     },
 ]
