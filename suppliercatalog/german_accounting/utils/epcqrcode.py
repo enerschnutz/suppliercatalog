@@ -5,7 +5,7 @@ import io
 import base64
 
 
-def get_epc_bank_account(doc,methode):
+def get_epc_bank_account(doc,method):
 
     settings = frappe.get_single("German Accounting Settings")
 
@@ -30,7 +30,6 @@ def get_epc_bank_account(doc,methode):
         + _("Open German Accounting Settings")
         + "</a>"
     )
-    return
 
 
 def generate_epc_payload(doc):
@@ -45,6 +44,8 @@ def generate_epc_payload(doc):
     recipient = settings.bank_recipient_name
     if not recipient:
         recipient = doc.company
+        
+    recipient = (recipient or "").strip()[:70]
 
     bank_account_name = doc.custom_recipient_bankaccount
     if not bank_account_name:
