@@ -1,6 +1,13 @@
-frappe.listview_settings['Sales Invoice'] = {
+const original_settings = frappe.listview_settings['Sales Invoice'] || {};
+const original_onload = original_settings.onload;
 
-  onload(listview) {
+frappe.listview_settings['Sales Invoice'] = original_settings;
+
+frappe.listview_settings['Sales Invoice'].onload = function(listview) {
+
+  if (original_onload) {
+    original_onload(listview);
+  }
 
     // ---------------------------------------
     // Progress Listener
@@ -216,5 +223,4 @@ frappe.listview_settings['Sales Invoice'] = {
 
       dialog.show();
     });
-  }
 };
