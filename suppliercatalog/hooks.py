@@ -187,7 +187,11 @@ doc_events = {
         "validate":"suppliercatalog.german_accounting.utils.epcqrcode.get_epc_bank_account",
         "on_submit": "suppliercatalog.german_accounting.utils.epcqrcode.add_epc_qr",
     },
-    
+
+   "Purchase Invoice": {
+	"validate":"suppliercatalog.german_accounting.utils.purchase_invoice.sync_posting_date_with_bill_date"
+    },
+
 }
 
 #    "Item Price": {
@@ -322,6 +326,7 @@ fixtures = [
                     "Price List Calculation Settings",
                     "German Accounting Settings",
                     "Sales Invoice",
+                    "Delivery Note",
                     "Purchase Invoice",
                     "Customer",
                 ]
@@ -348,6 +353,7 @@ fixtures = [
                     "Price List Calculation Settings",
                     "German Accounting Settings",
                     "Sales Invoice",
+                    "Delivery Note",
                     "Purchase Invoice",
                     "Customer",
                 ]
