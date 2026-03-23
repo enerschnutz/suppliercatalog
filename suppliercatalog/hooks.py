@@ -188,9 +188,9 @@ doc_events = {
         "on_submit": "suppliercatalog.german_accounting.utils.epcqrcode.add_epc_qr",
     },
 
-   "Purchase Invoice": {
-	"validate":"suppliercatalog.german_accounting.utils.purchase_invoice.sync_posting_date_with_bill_date"
-    },
+#   "Purchase Invoice": {
+#	"validate":"suppliercatalog.german_accounting.utils.purchase_invoice.sync_posting_date_with_bill_date"
+#    },
 
 }
 
