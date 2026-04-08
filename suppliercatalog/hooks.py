@@ -52,6 +52,7 @@ doctype_js = {
     "Purchase Receipt": "public/js/purchase_receipt.js",
     "Purchase Invoice": "public/js/customer_supplier_div.js",
     "Sales Invoice": "public/js/customer_supplier_div.js",
+    "Quotation": "public/js/customer_supplier_div.js",
 }
 
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
@@ -328,6 +329,7 @@ fixtures = [
                     "Sales Invoice",
                     "Delivery Note",
                     "Purchase Invoice",
+                    "Quotation",
                     "Customer",
                 ]
             ]
@@ -342,7 +344,7 @@ fixtures = [
                 "doc_type",
                 "in",
                 [
-                    # Suppliercatalog / bisher exportiert
+                    # Suppliercatalog
                     "Supplier Catalog Item",
                     "Supplier Catalog Settings",
                     "Item",
@@ -355,6 +357,7 @@ fixtures = [
                     "Sales Invoice",
                     "Delivery Note",
                     "Purchase Invoice",
+                    "Quotation",
                     "Customer",
                 ]
             ]

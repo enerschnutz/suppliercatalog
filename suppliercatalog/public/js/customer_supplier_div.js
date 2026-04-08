@@ -11,6 +11,9 @@ function toggle_custom_address_section(frm) {
     } else if (frm.doctype === "Sales Invoice") {
         party_field = "customer";
         settings_field = "customer_divers";
+    } else if (frm.doctype === "Quotation") {
+        party_field = "party_name";
+        settings_field = "customer_divers";
     } else {
         return;
     }
@@ -54,6 +57,16 @@ frappe.ui.form.on("Purchase Invoice", {
 
 // Sales Invoice hooks
 frappe.ui.form.on("Sales Invoice", {
+    refresh: function (frm) {
+        toggle_custom_address_section(frm);
+    },
+    customer: function (frm) {
+        toggle_custom_address_section(frm);
+    }
+});
+
+// Quotation hooks
+frappe.ui.form.on("Quotation", {
     refresh: function (frm) {
         toggle_custom_address_section(frm);
     },
